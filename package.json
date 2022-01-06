@@ -1,0 +1,47 @@
+{
+  "name": "ipfs-action",
+  "version": "0.1.6",
+  "description": "IPFS upload action",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --max-warnings 0 **/*.js",
+    "prune-prod": "npm prune --production",
+    "release": "release-it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proofzero/ipfs-action.git"
+  },
+  "keywords": [
+    "IPFS",
+    "GitHub",
+    "action",
+    "upload",
+    "deploy",
+    "deployment",
+    "delivery"
+  ],
+  "author": "Alex Flanagan <alex@kubelt.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/proofzero/ipfs-action/issues"
+  },
+  "homepage": "https://kubelt.com/",
+  "dependencies": {
+    "@actions/core": "1.4.0",
+    "@actions/github": "5.0.0",
+    "@pinata/sdk": "1.1.23",
+    "form-data": "^4.0.0",
+    "ipfs-http-client": "50.1.1",
+    "minimist": "1.2.5"
+  },
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "jest": "27.0.4",
+    "release-it": "14.8.0"
+  },
+  "eslintIgnore": [
+    "*.test.js"
+  ]
+}

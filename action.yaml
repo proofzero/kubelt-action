@@ -1,0 +1,59 @@
+---
+name: 'Upload to IPFS'
+description: 'The GitHub Action allows uploading DApps or content to IPFS. It supports IPFS, Pinata, Infura pinning services.'
+branding:
+  icon: 'upload-cloud'
+  color: 'green'
+inputs:
+  secret:
+    description: 'Secret used for KDF to generate deterministic peer keys for name publishing.'
+    required: true
+  cidpath:
+    description: 'Text file containing /ipfs/CID paths to publish as names.'
+    required: false
+  path:
+    description: 'Directory path to upload'
+    required: false
+  service:
+    description: 'Type of target service to upload. Supported services [ipfs, pinata, infura]'
+    required: false
+    default: 'ipfs'
+  timeout:
+    description: 'Request timeout'
+    required: false
+    default: 60000
+  verbose:
+    description: 'Level of verbosity'
+    required: false
+    default: false
+  host:
+    description: '[ipfs] IPFS host'
+    required: false
+    default: 'ipfs.komputing.org'
+  port:
+    description: '[ipfs] IPFS port'
+    required: false
+    default: 443
+  protocol:
+    description: '[ipfs] IPFS protocol'
+    required: false
+    default: 'https'
+  headers:
+    description: '[ipfs] IPFS headers as json object'
+    required: false
+    default: "{}"
+  pinataKey:
+    description: '[pinata] Api Key. Required for pinata service'
+    required: false
+  pinataSecret:
+    description: '[pinata] Secret Api Key. Required for pinata service'
+    required: false
+  pinataPinName:
+    description: '[pinata] Human name for pin'
+    required: false
+outputs:
+  hash:
+    description: 'IPFS root hash'
+runs:
+  using: 'node12'
+  main: 'index.js'
