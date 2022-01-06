@@ -2,6 +2,8 @@
 
 Based on [aquiladev/ipfs-action](https://github.com/aquiladev/ipfs-action/).
 
+See also [kubelt/kubelt-publish](https://github.com/kubelt/kubelt-publish) for more features.
+
 # Introduction
 
 This GitHub Action publishes content to IPFS and updates its IPNS name.
@@ -59,8 +61,8 @@ keys themselves. Therefore we need to send them our key.
 
 For relevant API documentation see:
 
-https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/NAME.md
-https://docs.ipfs.io/reference/http/api/#api-v0-key-import
+- https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/NAME.md
+- https://docs.ipfs.io/reference/http/api/#api-v0-key-import
 
 JavaScript and Golang use different key formats as well. JavaScript
 standardizes on PEM files, Golang releases 0.12.0 and lower use a serialized
@@ -74,7 +76,6 @@ doesn't accept keys POSTed in the body, go requires it).
 
 For discussion see:
 
-https://discuss.ipfs.io/t/importing-pem-encoded-private-key/12770/9
-https://github.com/ipfs/go-ipfs/issues/8594
-https://github.com/ipfs/go-ipfs/pull/8616
-
+- https://discuss.ipfs.io/t/importing-pem-encoded-private-key/12770/9
+- https://github.com/ipfs/go-ipfs/issues/8594
+- https://github.com/ipfs/go-ipfs/pull/8616
