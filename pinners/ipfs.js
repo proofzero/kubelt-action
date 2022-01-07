@@ -69,7 +69,8 @@ module.exports = {
     //form.set('key1', blob)
     //const encoder = new FormDataEncoder(form)
 
-    const url = new URL('https://ipfs.komputing.org/api/v0/key/import')
+    const url = new URL(options.host, 'https://example.com') //'https://ipfs.komputing.org
+    url.pathname = '/api/v0/key/import'
     const params = { 'arg': name }
     url.search = new URLSearchParams(params).toString();
     console.log(url)

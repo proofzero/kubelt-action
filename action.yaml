@@ -29,7 +29,7 @@ inputs:
   host:
     description: '[ipfs] IPFS host'
     required: false
-    default: 'ipfs.komputing.org'
+    default: 'ipfs.io'
   port:
     description: '[ipfs] IPFS port'
     required: false
